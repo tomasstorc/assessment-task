@@ -31,7 +31,7 @@ In the end you should be able connect to virtual machine and access key vault wh
 
 ## Task 3 - Create virtual machine (VM)
 
-- Create VM with Debian operating system.
+- Create VM with Windows server operating system.
 - Choose best SKU for server that needs 2 vCores and 4GB of RAM.
 - VM should have access to VNET and should be accessible from the internet as well.
 
