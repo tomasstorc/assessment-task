@@ -34,6 +34,7 @@ In the end you should be able connect to virtual machine and access key vault wh
 - Create VM with Windows server operating system.
 - Choose best SKU for server that needs 2 vCores and 4GB of RAM.
 - VM should have access to VNET and should be accessible from the internet as well.
+- No redundancy is required.
 
 ## Task 4 - Create Log Analytics Worksace (LAW)
 
