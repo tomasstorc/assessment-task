@@ -27,31 +27,36 @@ In the end you should be able connect to virtual machine and access key vault wh
 
 - Place VNET into created RG.
 - Use 10.0.0.0/25 as an address space.
-- Create two subnets in VNET, first should have 11 assigneable IP addresses and second 25 assigneable addresses.
+- Create two subnets in VNET, first should have 11 assigneable IP addresses and second 25 assigneable addresses. One subnet will be for virtual machine, second will be for key vault.
 
-## Task 3 - Create virtual machine (VM)
+## Task 3 - Create Network security group (NSG)
+
+- Create NSG so only allowed communication from the internet is RDP.
+- Attach this NSG to the subnet where VM will be placed
+
+## Task 4 - Create virtual machine (VM)
 
 - Create VM with Windows server operating system.
 - Choose best SKU for server that needs 2 vCores and 4GB of RAM.
 - VM should have access to VNET and should be accessible from the internet as well.
 - No redundancy is required.
 
-## Task 4 - Create Log Analytics Worksace (LAW)
+## Task 5 - Create Log Analytics Worksace (LAW)
 
 - Place LAW into created RG.
 
-## Task 5 - Configure VM insights
+## Task 6 - Configure VM insights
 
 - For created VM enable VM insights so it is possible to check all VM performance metrics
 - Collect metrics into previosly created LAW.
 
-## Task 6 - Create Key vault (KV)
+## Task 7 - Create Key vault (KV)
 
 - KV should be accessible only from VNET, no internet connection should be allowd.
 - Use RBAC access for data plane.
 - Assign yourself enough rights to be able to create secret in key vault, use least privilege model.
 
-## Task 7 - Create secret
+## Task 8 - Create secret
 
 - Login into created VM and go to Azure portal.
 - Open created KV and create a new secret.
